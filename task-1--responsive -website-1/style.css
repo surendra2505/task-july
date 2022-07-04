@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+
+a,
+body,
+button,
+div,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+img,
+input,
+li,
+main,
+nav,
+p,
+section,
+span,
+ul {
+  border: 0;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gray: #dcdcdc;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+/* --------------------- Header starts --------------------- */
+.header {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.header__logo {
+  float: left;
+}
+
+.header__logo img {
+  display: block;
+}
+
+.header__nav {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.menu li {
+  margin-right: 30px;
+  display: inline-block;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu li a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.menu li a:hover {
+  color: var(--black);
+}
+
+.header__btn {
+  margin-top: 5.5px;
+  float: right;
+}
+
+.header__btn button,
+.burger-btn {
+  background-color: #2086fb;
+  padding: 12px 30px;
+  border-radius: 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* --------------------- Banner starts --------------------- */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://i.ibb.co/K2TwqfS/hero-4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 568px;
+}
+
+.hero__search {
+  padding-top: 200px;
+}
+
+.hero__title {
+  margin-bottom: 24px;
+  font-size: 30px;
+  color: var(--white);
+  text-align: center;
+}
+
+.search__bar {
+  width: 75%;
+  border: 6px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.search__input {
+  width: 100%;
+  padding: 15px 0 15px 20px;
+  color: #9b9b9b;
+}
+
+.search__icon {
+  padding: 10px 16px;
+  background-color: var(--white);
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #4a4a4a;
+  cursor: pointer;
+}
+
+/* --------------------- Main starts --------------------- */
+.box {
+  margin: 40px 14px 32px;
+}
+
+.box:before,
+.box:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.box-card {
+  float: left;
+  text-align: center;
+}
+
+.box-card__title {
+  font-size: 18px;
+  margin: 24px 0 10px;
+}
+
+.box-card__desc {
+  line-height: 26px;
+}
+
+.help {
+  background-color: #323232;
+  padding: 64px 0 69px;
+  text-align: center;
+}
+
+.help__title1 {
+  font-size: 30px;
+  color: var(--white);
+}
+
+.help__title2 {
+  margin: 4px 0 48px;
+  color: var(--white);
+}
+
+.help__btn {
+  background-color: #2086fb;
+  padding: 12px 40px;
+  border-radius: 22px;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* --------------------- Footer starts --------------------- */
+.footer {
+  background-color: #323232;
+}
+
+.footer__copyright {
+  background-color: #252525;
+  padding: 27px 0 27px 40px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.copyright__back-to-top {
+  background-color: #4a4a4a;
+  padding: 8px 12.25px;
+  position: absolute;
+  right: 5%;
+  top: -23%;
+  border-radius: 4px;
+  text-align: center;
+  color: #979797;
+}
+
+/* --------------------- Burgermenu starts --------------------- */
+.togglebtn {
+  float: right;
+  display: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.togglebtn span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background-color: var(--white);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.togglebtn span:last-child {
+  margin: 0;
+}
+
+.toggle:checked ~ .togglebtn span:first-child {
+  opacity: 1;
+  transform: rotate(45deg) translate(9px, 5px);
+}
+
+.toggle:checked ~ .togglebtn span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.toggle:checked ~ .togglebtn span:last-child {
+  opacity: 1;
+  transform: rotate(-45deg) translate(8px, -4px);
+}
+
+.toggle {
+  width: 33px;
+  height: 22px;
+  /* float: right; */
+
+  position: absolute;
+  top: 23px;
+  right: 16px;
+
+  display: none;
+}
+
+.burger-btn {
+  display: none;
+}
+
+/* --------------------- Responsive starts --------------------- */
+@media (min-width: 992px) {
+  .box-card {
+    width: calc(100% / 4);
+    padding: 52px 35px 60px;
+  }
+  .box-card:not(:nth-child(4n)) {
+    border-right: 1px solid var(--gray);
+  }
+  .box-card:not(:nth-child(-n + 4)) {
+    border-top: 1px solid var(--gray);
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 8px 16px;
+  }
+  .hero__title {
+    padding: 0 8px;
+  }
+
+  .togglebtn {
+    display: block;
+  }
+  .burger-btn {
+    display: block;
+    margin: 0 auto 16px;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__nav {
+    overflow: scroll;
+    background-color: var(--white);
+    width: calc(100% - 40px);
+    max-height: calc(100vh - 80px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    margin: 68px 20px 20px;
+    border-radius: 0 0 8px 8px;
+    z-index: 1;
+    box-shadow: 0 0 30px #ccc;
+  }
+  .header__nav ul li {
+    display: block;
+    margin: 16px 0;
+  }
+  .header__nav ul li a {
+    color: var(--black);
+  }
+  .toggle:checked ~ .header__nav {
+    display: block;
+  }
+
+  .help {
+    padding: 64px 8px 69px;
+  }
+}
+
+@media (min-width: 593px) and (max-width: 991px){
+  .box {
+    margin: 40px 24px 32px;
+  }
+  .box-card {
+    width: calc(100% / 2);
+    padding: 52px 50px 60px;
+  }
+  .box-card:nth-of-type(odd) {
+    border-right: 1px solid var(--gray);
+  }
+  .box-card:not(:nth-child(-n + 2)) {
+    border-top: 1px solid var(--gray);
+  }
+}
+
+@media (max-width: 592px) {
+  .box {
+    margin: 40px 8px 32px;
+  }
+  .box-card {
+    width: calc(100%);
+    padding: 52px 50px 60px;
+  }
+  .box-card:not(:first-of-type) {
+    border-top: 1px solid var(--gray);
+  }
+}
